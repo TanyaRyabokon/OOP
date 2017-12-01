@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Runtime.Serialization.Json;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace Lab1_OOP
 {
@@ -34,6 +35,27 @@ namespace Lab1_OOP
             msObj.Close();
             Console.WriteLine(json);
             File.WriteAllText(path, json);
+        }
+
+        public static void XmlSerialization(PlanetarySystem<AstronomicalBody> bodies)
+        {
+            XmlSerializer ser = new XmlSerializer(typeof(PlanetarySystem<AstronomicalBody>));
+            Stream fs = new FileStream(@"D:\КПИ\ООП\OOP\lab3\Lab1_OOP\xmlserializer.xml", FileMode.Create);
+
+
+                ser.Serialize(fs, bodies);
+
+           
+        }
+
+        public static void XmlDeserialization(PlanetarySystem<AstronomicalBody> bodies)
+        {
+            XmlSerializer ser = new XmlSerializer(typeof(PlanetarySystem<AstronomicalBody>));
+            using (FileStream fs = new FileStream("xmlserializer.xml", FileMode.OpenOrCreate))
+            {
+                PlanetarySystem<AstronomicalBody> new_bodies = (PlanetarySystem<AstronomicalBody>)ser.Deserialize(fs);
+            }
+
         }
     }
 }

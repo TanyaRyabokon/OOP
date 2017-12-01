@@ -40,6 +40,10 @@ namespace Lab1_OOP
                     i++;
                 }
 
+                //get the biggest body
+                AstronomicalBody biggest = system.getBiggestBody();
+                Console.WriteLine("Biggest body in system " + biggest.Name);
+
                 Thread t1 = new Thread
                   (delegate ()
                   {
@@ -47,6 +51,9 @@ namespace Lab1_OOP
                       Console.WriteLine("\n\nSave to file\n\n");
                       Serialization fileManager = new Serialization();
                       fileManager.WriteToFileFromClass(system.Bodies, @"D:\КПИ\ООП\OOP\lab3\Lab1_OOP\data\out.json");
+                      Serialization.XmlSerialization(system);
+                      PlanetarySystem<AstronomicalBody> system1 = new PlanetarySystem<AstronomicalBody>(star);
+                      Serialization.XmlDeserialization(system1);
                   });
                 t1.Start();
                 //space ship

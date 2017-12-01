@@ -8,6 +8,6 @@ namespace Lab1_OOP
 {
     public interface IComparable<T>
     {
-        int CompareTo(T obj1, T obj2);
+        int CompareTo(T obj);
     }
 }

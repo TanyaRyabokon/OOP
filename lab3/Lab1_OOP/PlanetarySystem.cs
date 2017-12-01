@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 
@@ -95,6 +96,16 @@ namespace Lab1_OOP
         public void Add(T member)
         {
             astBodies.Add(member);
+        }
+
+        public static string GetInfo(PlanetarySystem<AstronomicalBody> bodies)
+        {
+            string info = "";
+            for(int i = 0;  i < bodies.Count; i++)
+            {
+                String.Concat(info, bodies[i].Name, " ");
+            }
+            return info;
         }
     }
 }

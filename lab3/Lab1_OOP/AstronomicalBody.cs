@@ -10,7 +10,9 @@ namespace Lab1_OOP
     public enum Type{
         Star, Planet, GasGiant, RedGiant, Asteroid, Body
     }
-    public class AstronomicalBody: ICoordinates<AstronomicalBody>, ICharacteristic<AstronomicalBody>
+
+    [Serializable]
+    public class AstronomicalBody: ICoordinates<AstronomicalBody>, ICharacteristic<AstronomicalBody>, IComparable<AstronomicalBody>
     {
 
         //fields
@@ -140,6 +142,22 @@ namespace Lab1_OOP
         public string Representation(float x, float y, float z)
         {
             return String.Format("( {0} ; {1}; {2} )", x, y, z);
+        }
+
+        public static void Info(AstronomicalBody b)
+        {
+            Console.WriteLine("This is {0}", b.Name);
+        }
+        //IComparable
+
+        public int CompareTo(AstronomicalBody body)
+        {
+            if (body.Weight > this.Weight)
+                return 1;
+            else if (body.Weight < this.Weight)
+                return -1;
+            else
+                return 0;
         }
         public override string ToString()
         {

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ArrayOfAstronomicalBody xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AstronomicalBody>
+    <Name>Kepler</Name>
+    <Kind>Body</Kind>
+    <Weight>2.59</Weight>
+    <Rotate>0</Rotate>
+    <Diameter>0</Diameter>
+    <X>345.45</X>
+    <Y>23.5</Y>
+    <Z>321.5</Z>
+  </AstronomicalBody>
+  <AstronomicalBody>
+    <Name>Ceres</Name>
+    <Kind>Body</Kind>
+    <Weight>7.36</Weight>
+    <Rotate>0</Rotate>
+    <Diameter>0</Diameter>
+    <X>3345.4</X>
+    <Y>789.4</Y>
+    <Z>347.83</Z>
+  </AstronomicalBody>
+  <AstronomicalBody>
+    <Name>Fortuna</Name>
+    <Kind>Body</Kind>
+    <Weight>9.34</Weight>
+    <Rotate>0</Rotate>
+    <Diameter>0</Diameter>
+    <X>795.67</X>
+    <Y>41.3</Y>
+    <Z>78.4</Z>
+  </AstronomicalBody>
+</ArrayOfAstronomicalBody>

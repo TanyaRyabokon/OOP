@@ -1,1 +1,1 @@
-[{"Diameter":0,"Kind":5,"Name":"Kepler","Rotate":0,"Weight":2.59,"X":345.45,"Y":23.5,"Z":321.5},{"Diameter":0,"Kind":5,"Name":"Ceres","Rotate":0,"Weight":7.36,"X":3345.4,"Y":789.4,"Z":347.83},{"Diameter":0,"Kind":5,"Name":"Fortuna","Rotate":0,"Weight":9.34,"X":795.67,"Y":41.3,"Z":78.4}]
+[{"diameter":0,"kind":5,"name":"Kepler","rotation":0,"weight":2.59,"x":345.45,"y":23.5,"z":321.5},{"diameter":0,"kind":5,"name":"Ceres","rotation":0,"weight":7.36,"x":3345.4,"y":789.4,"z":347.83},{"diameter":0,"kind":5,"name":"Fortuna","rotation":0,"weight":9.34,"x":795.67,"y":41.3,"z":78.4}]

@@ -99,7 +99,14 @@ namespace WpfApplication1
 
         private void Exit(object parameter)
         {
-            Application.Current.Shutdown();
+            bool answ = MessageBox.Show("OK to close?", "Confirm",
+           MessageBoxButton.YesNo) == MessageBoxResult.Yes;
+            if (answ)
+            {
+                Serialization fileManager = new Serialization();
+                fileManager.WriteToFileFromClass<AstronomicalBody>(Bodies.ToList<AstronomicalBody>(), @"D:\КПИ\ООП\OOP\lab5\WpfApplication1\data\out.json");
+                Application.Current.Shutdown();
+            }
         }
 
 

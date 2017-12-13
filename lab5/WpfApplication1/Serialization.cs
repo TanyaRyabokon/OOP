@@ -19,7 +19,7 @@ namespace WpfApplication1
             return obj;
         }
 
-        public void WriteToFileFromClass<T>(List<T> t, string path)
+        public void WriteToFileFromClass<T>(List<AstronomicalBody> t, string path)
         {
 
             DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(List<T>));
